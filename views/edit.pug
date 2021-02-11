@@ -1,0 +1,19 @@
+html
+    head
+        title Demo project 
+        style 
+            include ../static/edit.css 
+    body
+        div#container
+            h1 Edit and Save    
+            form(id='myform',action='/edit/'+oneEmp._id, method='post')
+                        label Name:
+                        input(type='text', class='myInput', name='name', value=oneEmp.name)
+                        label Age:
+                        input(type='text', class='myInput', name='age', value=oneEmp.age)
+                        label Phone:
+                        input(type='text', class='myInput', name='phone', value=oneEmp.phone)
+                        label Email:
+                        input(type='text', class='myInput', name='email', value=oneEmp.email)
+                        button(class='btn') save
+                        button(class="btn", onClick ='/getAll') Cancel 

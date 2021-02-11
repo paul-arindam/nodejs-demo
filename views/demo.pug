@@ -1,0 +1,43 @@
+html
+    head
+        title Demo project 
+        style 
+            include ../static/style.css
+    body
+        nav 
+            ul
+                li #[a(href='/getAll') Home]
+                li #[a(href='/about') About]
+        main 
+            section(id='form-container')
+                h1 Add a new Employee
+                form(id='myform',action='/save', method='post')
+                    label Name:
+                    input(type='text', class='myInput', name='name', placeholder='Enter your Name' required='true')
+                    label Age:
+                    input(type='text', class='myInput', name='age', placeholder='Enter your Age' required='true')
+                    label Phone:
+                    input(type='text', class='myInput', name='phone', placeholder='Enter your Phone Number' required='true')
+                    label Email:
+                    input(type='text', class='myInput', name='email', placeholder='Enter your Email' required='true')
+                    button(class='btn') Add Employee
+            div(id='empList')
+                h1 Employees List
+                div(id='tableContainer')
+                    table(id='table')
+                        th 
+                            td="Name"
+                            td="Age"
+                            td="Phone"
+                            td="Email"
+                        each val in emplist
+                            tr 
+                                td=val.name
+                                td=val.age
+                                td=val.phone
+                                td=val.email
+                                td(id='delete') #[a(class='del', href='#', empId= val._id) Delete]
+                                td(id='edit') #[a(href='/edit/'+val._id) Edit]
+    script
+        include  ../static/index.js
+     

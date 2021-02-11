@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color: #03a9f4;
+    height: 70px;
+}
+ul{
+    display:flex;
+    justify-content: center;
+}
+li{
+    list-style: none;
+    padding:9px;
+    margin: 13px 3px;
+}
+li:hover{
+    background-color: #0198df;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+main{
+    display:flex;
+}
+h1{
+    font-size: 30px;
+    margin-left: 40px;
+}
+#form-container{
+    flex:1;
+    margin-top: 30px;
+    border-right: 1px solid black;;
+}
+#myform{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+    margin-left: 40px;
+}
+.myInput{
+    width: 320px;
+    padding: 14px 10px;
+    margin: 0 0 12px 0px;
+    outline: none;
+    font-size: 18px;
+}
+.btn{
+    background-color: cornflowerblue;
+    padding: 10px;
+    width: 320px;
+    border-radius: 4px;
+    border: 1px solid #1363a2;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.btn:hover{
+    background-color: rgb(76, 115, 187);
+    cursor: pointer;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;;
+}
+#empList{
+    flex: 3;
+    margin-top: 30px;
+}
+#tableContainer{
+    margin: 20px;
+}
+tr{
+    display: inline-block;
+    min-width: 100%;
+}
+tr:nth-child(odd)
+{
+    background-color: rgb(211, 211, 211);
+}
+tr:nth-child(even)
+{
+    background-color: rgb(231, 231, 231);
+}
+td{
+    width: 130px;
+    padding: 23px;
+    font-size: 23px;
+    font-style: italic;
+    float: left;
+    color: black;
+}
+td a{
+    color: black;
+}
+#edit{
+    float:right;
+}
+#delete{
+    float: right;
+}
+
